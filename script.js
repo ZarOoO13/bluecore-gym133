@@ -95,3 +95,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const gymVideo = document.getElementById("gymVideo");
+const videoToggle = document.getElementById("videoToggle");
+
+if (gymVideo && videoToggle) {
+  videoToggle.addEventListener("click", () => {
+    if (gymVideo.paused) {
+      gymVideo.play();
+      videoToggle.textContent = "Ⅱ";
+      videoToggle.setAttribute("aria-label", "Παύση βίντεο");
+    } else {
+      gymVideo.pause();
+      videoToggle.textContent = "▶";
+      videoToggle.setAttribute("aria-label", "Αναπαραγωγή βίντεο");
+    }
+  });
+}
