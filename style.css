@@ -1954,3 +1954,363 @@ body::after {
     transform: none;
   }
 }
+
+
+
+/* =========================
+   Realistic Industrial Theme
+========================= */
+
+:root {
+  --background: #11161b;
+  --background-light: #171d22;
+  --card-background: #1c2329;
+
+  /* Πιο φυσικό μπλε, σαν βαμμένος τοίχος */
+  --primary: #2879ad;
+  --primary-hover: #3b91c8;
+  --primary-soft: rgba(40, 121, 173, 0.14);
+
+  --secondary: #7ca9c4;
+
+  --text: #f1f3f4;
+  --text-muted: #a8b0b5;
+
+  --border: rgba(200, 215, 225, 0.12);
+
+  --shadow:
+    0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Τσιμεντένιο background */
+
+body {
+  background-color: var(--background);
+
+  background-image:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.025),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 75% 60%,
+      rgba(255, 255, 255, 0.018),
+      transparent 26%
+    ),
+    linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.018) 0%,
+      transparent 35%,
+      rgba(0, 0, 0, 0.08) 100%
+    ),
+    #11161b;
+
+  color: var(--text);
+}
+
+
+/* Πιο φυσικό header */
+
+.header {
+  background-color: rgba(14, 18, 22, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.32);
+}
+
+
+/* Logo χωρίς υπερβολική λάμψη */
+
+.logo span {
+  background: none;
+  color: var(--primary-hover);
+  -webkit-text-fill-color: initial;
+}
+
+
+/* Hero με πιο ρεαλιστικά χρώματα */
+
+.hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 11, 14, 0.96) 0%,
+      rgba(8, 11, 14, 0.82) 45%,
+      rgba(8, 11, 14, 0.4) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #11161b 0%,
+      rgba(17, 22, 27, 0.55) 20%,
+      transparent 48%
+    ),
+    url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1800&q=90")
+    center 35% / cover no-repeat;
+}
+
+.hero h1 span {
+  background: none;
+  color: #3e91c4;
+  -webkit-text-fill-color: initial;
+}
+
+.hero-label {
+  background-color: rgba(40, 121, 173, 0.18);
+  color: #9ec9e1;
+
+  border-color: rgba(80, 155, 200, 0.32);
+}
+
+
+/* Sections σαν πραγματικός τοίχος */
+
+.programs,
+.pricing,
+.reviews {
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.018),
+      transparent 38%
+    ),
+    #11161b;
+}
+
+
+/* Μπλε βαμμένος τοίχος */
+
+.about,
+.contact {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(28, 92, 134, 0.34) 0%,
+      rgba(28, 92, 134, 0.2) 36%,
+      rgba(20, 27, 32, 0.95) 36%,
+      rgba(20, 27, 32, 0.98) 100%
+    ),
+    #151b20;
+}
+
+.about::after,
+.contact::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  opacity: 0.35;
+
+  background:
+    radial-gradient(
+      circle at 18% 35%,
+      rgba(255, 255, 255, 0.045),
+      transparent 18%
+    ),
+    linear-gradient(
+      105deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.02) 46%,
+      transparent 47%
+    );
+
+  pointer-events: none;
+}
+
+
+/* Κάρτες σαν σκούρο μέταλλο */
+
+.program-card,
+.pricing-card,
+.review-card,
+.contact-form,
+.stat {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.035),
+      transparent 40%
+    ),
+    #1b2228;
+
+  border: 1px solid rgba(190, 205, 215, 0.11);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+
+/* Hover χωρίς neon */
+
+.program-card:hover,
+.review-card:hover {
+  border-color: rgba(70, 145, 190, 0.5);
+
+  box-shadow:
+    0 22px 45px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(40, 121, 173, 0.08);
+}
+
+
+/* Κουμπιά σαν βαμμένο μέταλλο */
+
+.button-primary {
+  background:
+    linear-gradient(
+      180deg,
+      #3689bb,
+      #246c99
+    );
+
+  color: #f7fafc;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.button-primary:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #4398ca,
+      #2b79a8
+    );
+
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.36);
+}
+
+.button-secondary {
+  background-color: rgba(255, 255, 255, 0.025);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* Τίτλοι */
+
+.section-label {
+  background-color: rgba(40, 121, 173, 0.16);
+  color: #9cc7df;
+
+  border-color: rgba(80, 150, 190, 0.25);
+}
+
+.section-heading h2,
+.about-content h2,
+.contact-info h2 {
+  color: #f4f5f6;
+}
+
+
+/* Τιμές και αριθμοί */
+
+.price,
+.stat strong,
+.program-card a,
+.location-details strong {
+  background: none;
+  color: #4a9ac8;
+  -webkit-text-fill-color: initial;
+}
+
+
+/* Δημοφιλές */
+
+.popular-label {
+  background:
+    linear-gradient(
+      180deg,
+      #4b9dcc,
+      #2d78a5
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-card.featured {
+  border-color: rgba(61, 137, 183, 0.65);
+
+  box-shadow:
+    0 24px 50px rgba(0, 0, 0, 0.4),
+    inset 0 0 40px rgba(40, 121, 173, 0.045);
+}
+
+
+/* Εικόνα About πιο φυσική */
+
+.about-image img {
+  filter:
+    saturate(0.72)
+    contrast(1.08)
+    brightness(0.84);
+}
+
+.about-image::before {
+  border-color: rgba(55, 135, 183, 0.65);
+}
+
+
+/* Φόρμα */
+
+.form-group input,
+.form-group textarea {
+  background-color: rgba(12, 16, 20, 0.78);
+
+  border-color:
+    rgba(200, 215, 225, 0.12);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #367fa9;
+
+  box-shadow:
+    0 0 0 3px rgba(40, 121, 173, 0.12);
+}
+
+
+/* Χάρτης */
+
+.contact-map {
+  border-color: rgba(200, 215, 225, 0.14);
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.35);
+}
+
+.contact-map iframe {
+  filter:
+    grayscale(0.35)
+    saturate(0.75)
+    contrast(1.05)
+    brightness(0.82);
+}
+
+
+/* Mobile: ο μπλε τοίχος γίνεται πιο διακριτικός */
+
+@media (max-width: 900px) {
+  .about,
+  .contact {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(29, 89, 128, 0.25) 0%,
+        rgba(20, 27, 32, 0.96) 28%,
+        rgba(20, 27, 32, 0.98) 100%
+      );
+  }
+}
